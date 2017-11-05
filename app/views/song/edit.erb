@@ -10,7 +10,7 @@
 
   <p>Select Genre:</p>
   <% @genres.each do |g|%>
-    <input type="checkbox" name="genres[]" value="<%=g.id%>" id="<%=g.name%>"><%=g.name%></input>
+    <input type="checkbox" name="genres[]" value="<%=g.id%>" id="<%=g.name%>" <%='checked' if @genres.include(g)%>><%=pet.name%>><%=g.name%></input>
   <% end %>
 
   <p><input type="submit" name="" value="Save"></p>
