@@ -33,7 +33,7 @@ class SongsController < ApplicationController
   post '/songs/:slug' do
     binding.pry
     @song = Song.find_by_slug(params[:slug])
-    @song.name = params[:song_name]
+    #@song.name = params[:song_name]
     @song.artist = Artist.find_or_create_by(name: params[:artist_name])
     @song.genre_ids = (params[:genres])
     #binding.pry
