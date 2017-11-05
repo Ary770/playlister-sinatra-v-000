@@ -6,7 +6,7 @@
 
   <p>Song Name: <input type="text" name="song_name" value="<%=@song.name%>" id="Name"></p>
 
-  <p>Artist Name: <input type="text" name="artist_name" id="Artist Name"></p>
+  <p>Artist Name: <input type="text" name="artist_name" value="<%=@song.artist.name%>" id="Artist Name"></p>
 
   <p>Select Genre:</p>
   <% @genres.each do |g|%>
