@@ -34,8 +34,8 @@ class SongsController < ApplicationController
     binding.pry
     @song = Song.find_by_slug(params[:slug])
     @song.name = params[:song_name]
-    
-    @song.artist = Artist.findy_by(name: params[:artist_name])
+
+    @song.artist = Artist.find_by(name: params[:artist_name])
     binding.pry
     redirect to "/songs/#{song.slug}"
   end
